@@ -1,0 +1,14 @@
+# Additional capabilities. Historical exact pins are not available.
+anndata
+scanpy
+harmonypy
+infercnvpy
+h5py
+numcodecs
+zarr
+igraph
+leidenalg
+matplotlib
+seaborn
+requests
+openpyxl

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.RData
+*.RDS
+*.RDS.gz
+*.h5ad
+data/raw/
+external_inputs/
+verification_output/
+*.part

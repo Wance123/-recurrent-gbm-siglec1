@@ -1,0 +1,218 @@
+[
+  {
+    "path": "scripts/01_audit_geo_miniml.py",
+    "sha256": "9f6513200508aa831b0f78e56ac1dc901ab68f88e0094a6f96d33740ddbecc4c",
+    "source_sha256": "036077ac114b2e171f27724f09fa9eba2530c7f0f6616e1f5aa5e49d7117fd8d",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "scripts/02_extract_supplement_metadata.py",
+    "sha256": "944e9712c241c5b36497fa085080b0498cbfb4fed0158d234c0a9f87501be9ab",
+    "source_sha256": "2dc83e8051f142dcfe1497d39294a37958ace5f496503cd138f73cbd2d7332bc",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "scripts/03_audit_tar_matrices.py",
+    "sha256": "155be8178e0ab5d9610eaffa7b007f91ed39f9fae7558a954d6c6db54ae3a047",
+    "source_sha256": "d896c3189737c390c166d93f01c202fcf361df110984685c032bfc50d3f25172",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "scripts/04_stream_qc_gse200984.py",
+    "sha256": "a87bf4c725ca10402b12c8b0c71b01d5e64d1cc9a1a8d16970c700f75b7b9d90",
+    "source_sha256": "0b32b4094fb542c9967668bea8c64d60ac99bfa86f41e53e3f5fdd5aee94307e",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "scripts/05_quality_gate.py",
+    "sha256": "51570aa5f920d8804134d6ce3910b382de86794a10acc94d931b75e86f7db542",
+    "source_sha256": "64d72c2a47f47593f256da2d74b46a2f067c0bed748e43a241ab404034a13358",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "scripts/06_build_anndata_and_scrublet.py",
+    "sha256": "da93f44797676506ed66607a5800446227233af5528a613d7d449f3878031d78",
+    "source_sha256": "f002bf364c50dcd12c34e6148a2205fc5b8cff2c73fa1c85611c8e871d94df3f",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "scripts/07_integrate_basic_atlas.py",
+    "sha256": "5d88cb3443c82cbeb2a480cf09c15e9f50ef47d9c10ab517df37c941ff537c1a",
+    "source_sha256": "7e85e05f9d4d0d9d52067600b03c54317fa9e94738085badc713f9646bad3a48",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "scripts/08_cluster_qc_and_markers.py",
+    "sha256": "f1fa9ec5f20ea27a4be663b296599eea2c38f9ad84814e88c911d1f3d4ed1e1a",
+    "source_sha256": "09bcab54f6a55579a3ccf1188385e0643ef82a2d6b5c94ade584bcb356bc5f77",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "scripts/09_infercnv_screen.py",
+    "sha256": "97adc358edcc899198c1a85e46deeeb19734bc782bcff89045cff0e28fb58901",
+    "source_sha256": "ac4758334aa63e5c79b4b90e47fd63fb62d4ffb3051eedf8f53fc41f48779723",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "further/01_prepare_myeloid_inputs.py",
+    "sha256": "292c98c22a00682b70b7873fdff16e66cde4869fcc49cf485cbd2d2eb1294f84",
+    "source_sha256": "3ff39f04b000b3be9523dd1ac8a90ad469069c747b18ddfb7d81aac42a7e078b",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "further/01_prepare_myeloid_inputs_filtered.py",
+    "sha256": "014c78bf443606dd29ea88f2c0d1ba8d63623c24c0a1af3c47386ed603a619c6",
+    "source_sha256": "b2c03f957a0153778b89963a7d504a17f2083524c3fbd67d4b755220d9cd713c",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "further/02_run_sctenifoldknk.R",
+    "sha256": "f5d96e1a20e8534ec59139c7b59e9a8bfb8478d719491205303319c04974b750",
+    "source_sha256": "19077ab38c9a2fb636252b28673e1d0403a27cfd21a5334b3848eadf73b2a8c1",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "further/02_run_sctenifoldknk_exploratory.R",
+    "sha256": "1345f3452c803583d2aefcc2bd99b3a2c15e0a976d5e01cd5dfb1c01f8fb06a7",
+    "source_sha256": "f6565fe1ccc6b7e832703f491394e71a37c2229f37b925b72b3750331ef50c75",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "further/03_summarize_sctenifoldknk.R",
+    "sha256": "80091f15848a0c7e6870273749975bc868cd1d67ae143d3ab28bc192799264ae",
+    "source_sha256": "d95b6e36dfd2077247e4168686de10c2f64009757cf3cebc19980d9c12cb9c12",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "further/04_check_signal_prevalence.py",
+    "sha256": "802a2dec4fdd0336c73e7ba0e5fa73cc93536989c41ddc3420d8a5dabbea4933",
+    "source_sha256": "8113c19d6301b671c3f1f8527ab9e1cccf24667618971639b8f4026d1d933a72",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "further/05_closed_reinforcement.py",
+    "sha256": "c6a1a6495e2bb8b2476ecd1e0a062c7383d065285271ac8084fd72097a92ac0c",
+    "source_sha256": "ac92616da185a5f8fd9a50671f925d5f78cdbb4f4cda3207a30ef083f9960df9",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "further/05b_run_closed_reinforcement.py",
+    "sha256": "fc4a9e5429a2c3554e12c6328bbc775c9f7385843148dacd4ed0841a0a10d214",
+    "source_sha256": "f6727d5c86300b6c643b52569f39c5c79512c9d8a81d2c873c4729a207d5eb3c",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "further/build_revised_figures.py",
+    "sha256": "584ffba36fcf57a39f9d1c82cdcf67a6acc39beba8401d657a93804f991a9cc5",
+    "source_sha256": "c6db10c5a83d0d194c1c865393743a80e232f22b9e69a415ce9c9f38d8b1f5e2",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/revision_analysis.py",
+    "sha256": "6198179a0d7b4853ac53b18770d4eba84344d7f0317b5645e3cae9344a871489",
+    "source_sha256": "c21d56f6b2399a425fa0c78fff1ad609417957d7fb2460575a13802f65f04c10",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/reference_diagnostics.py",
+    "sha256": "72cfa8e26bea828c10147afe2863a4617b98ee008d30e2bbc377819a209eb673",
+    "source_sha256": "6e560896c329b636ce3f457eecd7aec96d54f6c646d0bd0cdf832f6ec9364f14",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/audit_bulk_gene_mapping.py",
+    "sha256": "c951e140183fc6a8c805e350dae0bb03ac58c651a84a23b4e5ee39ac2d35a846",
+    "source_sha256": "2bc0461e512d5b433bec9aaa58baef397501257b22355efd6f830cd2c5de2911",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/revision_audit.py",
+    "sha256": "a1c204a8eb65c098942109938db21cf36a976c7e5bad1be13f8dda4aa99a705f",
+    "source_sha256": "4c8d8a74607b933cb15761d789bb0ef4cf813e65f820951ae47121c957d62b0a",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/revision_figures.py",
+    "sha256": "0493a70d821e12c0cf54f637c85536e580219b6f3c63c820daee74c02fb6234f",
+    "source_sha256": "cc839763d7ef7bf5ecb15eb274d23b0fac897e325479c72639b5fb46859c9d3e",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/final_scientific_checks.py",
+    "sha256": "9b7d395529b2d61a189672180790ac74a2f25c4dc25f9f120df583d149255feb",
+    "source_sha256": "b63ea8f3262a34666f5ee4e7a24aafa9a3faf89875d28b83aff55734be67f040",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/annotation_benchmark.py",
+    "sha256": "4f03853a70fb655c732aaa705e9aa46d96f4fef745cb18a6380d3fbadc1cd69b",
+    "source_sha256": "bc4f51c13ce9806256aba97f728424aeb7f3c9abe81ccec8ba1de97308e80992",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/export_author_labels.R",
+    "sha256": "037a1cf7c6c8545738b901073256c60fafa190b58e10e43c1735ad473bd5322b",
+    "source_sha256": "037a1cf7c6c8545738b901073256c60fafa190b58e10e43c1735ad473bd5322b",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/recurrence_marker_reassessment/reassess.py",
+    "sha256": "0e66d521ba4bef370b7c5d5fb32ab9563bc5810c4e0e12da0d3fbae408235dae",
+    "source_sha256": "534e0c686230043183f7201da5e15942189a575d9dc545771a86bba2d72e45f1",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/recurrence_marker_reassessment/make_figure.py",
+    "sha256": "aa176e8590d134125a70edb5d2cfca6067ad0bb5bf83d118f113c40c8bdb3836",
+    "source_sha256": "922b30c1e52b1594dbdba545d6ae7a775a4ea8558ffb29b178a1275f20fe70ba",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/external_validation_expansion_20261008/array_validation.py",
+    "sha256": "35dbed4ace91e72f9e35e2ff06866467899c47f944fd480ac6b65ead8f27f8fb",
+    "source_sha256": "69e91f947e2acdad64e8d234a5d43ec15a3272e0e327e4ddbaf193cc03b5afb6",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/external_validation_expansion_20261008/build_report_and_qa.py",
+    "sha256": "5001efcc0658dc197a89db369bc29b50e938c5535241c0779355062e865cade9",
+    "source_sha256": "35bc118b848bdf9d04ec7667482994bef539fead5068046112b9f01fb71bdba2",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/external_validation_expansion_20261008/evaluate_external.py",
+    "sha256": "a53e07b7beede54985ed09ede7dea87451eabd9f9c9c8f62568cd771097c44d7",
+    "source_sha256": "6694382a48acaeb67e970493d32c2e1280c0f2c00c1eebb14e1589b257c6af47",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/external_validation_expansion_20261008/fetch_matrices.py",
+    "sha256": "f427256fdc360c34432d1b8831bcf039f6ab02a153295857deb6117ce9c15646",
+    "source_sha256": "cf3db56729a1eea1356b2d8b79c74a31c94108cc1049b38cca2682d10dd078bf",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/external_validation_expansion_20261008/fetch_metadata.py",
+    "sha256": "f0fefffde02fb9b9dae8d892049fef9e119e36b3bfd17e7ac9fa0c84bde1a4dd",
+    "source_sha256": "3c02c82d0b68c731c4429a65514862ef74c9b0397ef700a1dbc0dd794a935def",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/external_validation_expansion_20261008/fetch_records.py",
+    "sha256": "ba0e00459c2759b8a7288a18b2a425fe42fb4a910185df59ece8c99a3f286b42",
+    "source_sha256": "3c89f5b135457d0cbdf20813040763c1ca1dee7a173d144605c6a8f1a125a04c",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/external_validation_expansion_20261008/export_care_siglec1.R",
+    "sha256": "31433043de227556bc5ae01f66517fddfd567fb528c6945cea8bfc75f2e60147",
+    "source_sha256": "6c20ac1e9b51706ef5aea1c5639fdf83fa5b7cfeaedb40a702f268b384122f2c",
+    "role": "analysis script; path-only relocation"
+  },
+  {
+    "path": "Revision/integrated_external_validation_20261008/make_s6.py",
+    "sha256": "07246d3302dfd2792e38215693f0c8c6f5c3ad17b0f58995b93124095398b88a",
+    "source_sha256": "064b2b7901d3934f9558a79d37623655a911274c9d47b1e313e92db388f579a7",
+    "role": "analysis script; path-only relocation"
+  }
+]

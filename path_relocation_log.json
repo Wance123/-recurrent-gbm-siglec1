@@ -1,0 +1,82 @@
+[
+  {
+    "file": "further/01_prepare_myeloid_inputs.py",
+    "path_key": "ROOT",
+    "relative_tail": ""
+  },
+  {
+    "file": "further/01_prepare_myeloid_inputs_filtered.py",
+    "path_key": "ROOT",
+    "relative_tail": ""
+  },
+  {
+    "file": "further/04_check_signal_prevalence.py",
+    "path_key": "ROOT",
+    "relative_tail": "further"
+  },
+  {
+    "file": "further/05_closed_reinforcement.py",
+    "path_key": "ROOT",
+    "relative_tail": ""
+  },
+  {
+    "file": "further/05b_run_closed_reinforcement.py",
+    "path_key": "ROOT",
+    "relative_tail": "further/05_closed_reinforcement.py"
+  },
+  {
+    "file": "further/build_revised_figures.py",
+    "path_key": "ROOT",
+    "relative_tail": ""
+  },
+  {
+    "file": "Revision/revision_analysis.py",
+    "path_key": "GSE174554_RAW",
+    "relative_tail": ""
+  },
+  {
+    "file": "Revision/revision_analysis.py",
+    "path_key": "GSE174554_METADATA_PARENT",
+    "relative_tail": ""
+  },
+  {
+    "file": "Revision/revision_analysis.py",
+    "path_key": "ROOT",
+    "relative_tail": ""
+  },
+  {
+    "file": "Revision/revision_figures.py",
+    "path_key": "ROOT",
+    "relative_tail": ""
+  },
+  {
+    "file": "Revision/annotation_benchmark.py",
+    "path_key": "AUTHOR_WORKSPACE",
+    "relative_tail": "metadata/GSE200984_author_all_nuclei_metadata.csv"
+  },
+  {
+    "file": "Revision/recurrence_marker_reassessment/reassess.py",
+    "path_key": "GSE174554_RAW",
+    "relative_tail": ""
+  },
+  {
+    "file": "Revision/recurrence_marker_reassessment/reassess.py",
+    "path_key": "GSE174554_METADATA",
+    "relative_tail": ""
+  },
+  {
+    "file": "Revision/recurrence_marker_reassessment/reassess.py",
+    "path_key": "ROOT",
+    "relative_tail": "Revision"
+  },
+  {
+    "file": "Revision/external_validation_expansion_20261008/evaluate_external.py",
+    "path_key": "CGGA693",
+    "relative_tail": ""
+  },
+  {
+    "file": "Revision/external_validation_expansion_20261008/evaluate_external.py",
+    "path_key": "CGGA325",
+    "relative_tail": ""
+  }
+]
