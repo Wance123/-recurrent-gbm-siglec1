@@ -42,4 +42,6 @@ The repository supports a **context-dependent candidate-marker** interpretation.
 
 ## Provenance
 
+The October 11, 2026 language-only update translates the generated external-validation report and its output filename into English. Statistical code, input selection, thresholds, random seeds, and numerical outputs are unchanged. The previous revision remains available in Git history; the current source manifest records the translated script hash.
+
 `release_source_manifest.json` records original and distributed script SHA-256 hashes. `path_relocation_log.json` records path-only substitutions. No access tokens or raw sequencing files are included. The study has not been newly submitted by publishing this repository. No license for third-party source datasets or software is implied; users must respect their respective terms.
