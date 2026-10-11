@@ -175,9 +175,9 @@
   },
   {
     "path": "Revision/external_validation_expansion_20261008/build_report_and_qa.py",
-    "sha256": "5001efcc0658dc197a89db369bc29b50e938c5535241c0779355062e865cade9",
+    "sha256": "cb2d1e401a0ef33458320b1dd7df28c47af08c71e30c7b061b7ddb0a64100b80",
     "source_sha256": "35bc118b848bdf9d04ec7667482994bef539fead5068046112b9f01fb71bdba2",
-    "role": "analysis script; path-only relocation"
+    "role": "analysis script; path relocation and English report-text translation; analytical prefix unchanged"
   },
   {
     "path": "Revision/external_validation_expansion_20261008/evaluate_external.py",
