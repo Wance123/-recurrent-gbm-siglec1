@@ -73,47 +73,47 @@ for item in manifest:
 qa=dict(numerical_checks_passed=True,completed_new_cohorts=6,fixed_outcome_rows=len(alltests),unavailable_outcomes=int(alltests.p.isna().sum()),recomputed_test_rows=len(checks),CARE_samples=121,CARE_patients=cl['Patient ID'].nunique(),CARE_QC_TAM_nuclei=int(care.loc[care.group.eq('TAM'),'n_cells'].sum()),CARE_primary_paired_myeloid_patients=48,CGGA_shared_sample_identifiers=overlap,cross_database_person_identity_deduplication='not established',candidate_revision_package_unchanged=True,unchanged_package_files=len(unchanged),external_submission=False)
 (ROOT/'FINAL_ANALYSIS_QA.json').write_text(json.dumps(qa,indent=2),encoding='utf-8')
 
-lines=['SIGLEC1 新增外部验证报告','日期：2026-10-08','',
-'结论：新增6个队列/数据集的计算验证已完成，不以是否阳性决定纳入。',
-'新增支持集中在CGGA693组织层面的复发关联，以及CARE的干扰素相关髓系状态关联。',
-'新增数据不确证SIGLEC1为复发特异性标志物。其他队列的阴性结果全部保留。','',
-'一、SIGLEC1主要检验（双侧；组内BH按固定5个指标；另对6队列的SIGLEC1检验统一BH）']
+lines=['SIGLEC1 additional external validation report','Date: 2026-10-08','',
+'Conclusion: Computational validation in six additional cohorts/datasets is complete. Inclusion was not determined by positive results.',
+'Additional support is concentrated in the tissue-level recurrence association in CGGA693 and the interferon-related myeloid-state association in CARE.',
+'The additional data do not establish SIGLEC1 as a recurrence-specific marker. Negative results from the other cohorts are retained.','',
+'1. Primary SIGLEC1 tests (two-sided; within-cohort BH across five fixed outcomes; separate BH across the six cohort-level SIGLEC1 tests)']
 for _,s in primary.iterrows():
-    size=f'{int(s.n_primary)}对' if s.design=='paired' else f'原发{int(s.n_primary)}、复发{int(s.n_recurrent)}'
-    lines.append(f"{s.cohort}：{size}；复发减原发效应={s.effect:.6g}（{s.unit}）；P={s.p:.6g}；组内q={s.q_within_five:.6g}；6队列q={s.q_across_six_cohorts:.6g}。")
-lines.extend(['','二、可支持与不能支持的解释',
-'CGGA693：SIGLEC1与CD68均升高；SIGLEC1-CD68并未支持相对升高；四参照/两参照差值的P分别约0.821/0.800。因此仅支持组织层面的关联，不能排除髓系组成变化。',
-'CGGA325：主要SIGLEC1检验未复现。两套CGGA仅为非配对比较，不能证明同一患者复发诱导。纳入样本ID没有交集，但缺少个人级跨队列去重证明。',
-'CARE：121个标本、59名成人IDHwt患者，按相同QC重汇总；髓系主要检验48对，29对升高，但P=0.2148、q=0.3580，未达到显著。全核平均表达/髓系及全核伪bulk敏感性也未支持经校正的总体升高。'])
+    size=f'{int(s.n_primary)} pairs' if s.design=='paired' else f'primary {int(s.n_primary)}, recurrent {int(s.n_recurrent)}'
+    lines.append(f"{s.cohort}: {size}; recurrent-minus-primary effect={s.effect:.6g} ({s.unit}); P={s.p:.6g}; within-cohort q={s.q_within_five:.6g}; six-cohort q={s.q_across_six_cohorts:.6g}.")
+lines.extend(['','2. Supported and unsupported interpretations',
+'CGGA693: SIGLEC1 and CD68 both increase; the SIGLEC1-CD68 difference does not support a relative increase. P values for the four-reference/two-reference differences are approximately 0.821/0.800. This supports a tissue-level association only; changes in myeloid composition cannot be excluded.',
+'CGGA325: The primary SIGLEC1 test does not replicate. Both CGGA comparisons are unpaired and cannot establish within-patient recurrence induction. Included sample IDs do not overlap, but person-level cross-cohort deduplication has not been established.',
+'CARE: 121 specimens from 59 adult IDH-wild-type patients were reaggregated using the same QC. The primary myeloid test includes 48 pairs, with increases in 29, but P=0.2148 and q=0.3580 are nonsignificant. Sensitivity analyses of all-nucleus mean expression and myeloid/all-nucleus pseudobulk also do not support an adjusted overall increase.'])
 for _,s in program[program.program.eq('Interferon_response')].iterrows():
-    lines.append(f"CARE {s.condition}：{int(s.n_specimens)}个可评估髓系标本；深度调整后SIGLEC1-干扰素中位rho={s.median_rho:.6g}；6程序组内q={s.q:.6g}。")
+    lines.append(f"CARE {s.condition}: {int(s.n_specimens)} evaluable myeloid specimens; depth-adjusted median SIGLEC1-interferon rho={s.median_rho:.6g}; within-six-program q={s.q:.6g}.")
 s=stage[stage.program.eq('Interferon_response')].iloc[0]
-lines.append(f"CARE配对干扰素关联变化：{int(s.n_pairs)}对；变化={s.median_change:.6g}；P={s.p:.6g}；q={s.q:.6g}。两阶段都有相关性不等于复发特异性。")
-lines.extend(['GSE212067：7对明确成人IDHwt原发/复发GBM，结果不支持SIGLEC1升高。',
-'GSE4271：依据原作者互相匹配字段，选16对成人且两次均为历史WHO IV的组织；IDH缺失，不能视作现代IDHwt GBM验证。',
-'GSE7696：采用原作者patient字段，不按样本名猜配对；3个有效配对。样本量极小，P=0.25未显著。bootstrap区间不应被当作可靠显著性证据。',
-'官方唯一基因探针规则下，GSE4271/GSE7696的CD68映射不可用；CD68及SIGLEC1-CD68结果留空，不补零、不挑探针。','',
-'三、检索中未作为新增独立验证的资源',
-'GSE62153：既有项目已分析过，不计为新增数据源。',
-'GSE228497：与原发现来源同属GSE228500，不能当独立复现。',
-'GSE79671：主要为复发GBM贝伐珠单抗联合治疗前后比较，不是清晰的原发/复发验证。',
-'GSE42670/GSE42669：前者为混合超级系列，后者含58份人GBM表达，尚需直接复发标签和患者配对核查；未给出SIGLEC1结果。',
-'GLASS：表达数据仅覆盖部分样本，访问条款、来源重叠及IDH/时间点对照尚需审核；未完成本轮数值验证。','',
-'四、数据与方法限制',
-'所有新增检验均为修稿后探索性验证，不是预注册的确认性研究；BH不追溯修正此前的候选基因选择。',
-'不将不同表达单位的效应直接合并。伪bulk log2(CPM+1)、细胞平均ln表达、FPKM和芯片归一化信号分别报告。',
-'新队列按设计/覆盖/配对筛选，不按阳性结果筛选。更宽松阈值、患者剔除或单侧检验未用于制造结论。',
-'跨数据源个人身份重叠未完全排除。CARE与GSE174554的标本来源和肿瘤ID未发现直接重合，但这不替代个人级去重。','',
-'五、建议写入稿件的定位',
-'可增加CGGA693作为组织层面关联的补充证据，同时完整报告CGGA325及三个组织配对队列未复现。',
-'CARE可加强“SIGLEC1与干扰素相关髓系状态相对应”的跨队列证据；同时明确48对总体变化和47对阶段关联变化为阴性。',
-'保留“候选、情境依赖性复发相关髓系重塑标志物”的探索性主线，不升级为“已验证的复发特异性标志物”。',
-'建议停止无边界地寻找阳性数据库，下一步同步更新手稿和回复中的证据等级，并将所有新增检验放入补充材料。','',
-'六、质量核查与文件',
-f'主要与敏感性结果共{len(alltests)}行，其中{alltests.p.isna().sum()}项因缺失基因而不可估计；其余检验及BH值已独立复算。',
-'原修稿投稿包SHA256保持不变；本轮没有更改或上传手稿。',
-'统计与患者级数据在results目录；原始元数据/处理后矩阵/探针映射在input目录。',
-'本轮仅下载公开元数据、处理后矩阵和必要平台注释；未下载FASTQ或CEL；CARE和CGGA大型计数复用已有缓存。','',
-'公共记录：']+[f'{k}: {v}' for k,v in urls.items()])
-(ROOT/'新增外部验证报告.txt').write_text('\n'.join(lines),encoding='utf-8')
+lines.append(f"CARE paired change in interferon association: {int(s.n_pairs)} pairs; change={s.median_change:.6g}; P={s.p:.6g}; q={s.q:.6g}. Association at both stages does not establish recurrence specificity.")
+lines.extend(['GSE212067: Seven clearly identified adult IDH-wild-type primary/recurrent GBM pairs do not support increased SIGLEC1.',
+'GSE4271: Sixteen adult pairs with historical WHO grade IV tissue at both time points were selected using the original authors matching fields. IDH is unavailable; this is not modern IDH-wild-type GBM validation.',
+'GSE7696: Pairing uses the original authors patient field, not assumptions from sample names; three evaluable pairs remain. The sample is very small and P=0.25 is nonsignificant. Bootstrap intervals should not be interpreted as reliable significance evidence.',
+'Under the official unique-gene probe rule, CD68 mapping is unavailable in GSE4271/GSE7696. CD68 and SIGLEC1-CD68 outcomes remain missing; no zero imputation or selective probe choice is used.','',
+'3. Resources not used as additional independent validation',
+'GSE62153: Previously analyzed in the existing project; not counted as a new data source.',
+'GSE228497: Shares the GSE228500 source with discovery and cannot count as independent replication.',
+'GSE79671: Primarily a pre/post bevacizumab-combination treatment comparison in recurrent GBM, not an unambiguous primary/recurrent validation.',
+'GSE42670/GSE42669: The former is a mixed superseries; the latter contains 58 human GBM expression profiles. Direct recurrence labels and patient pairing still require verification; no SIGLEC1 result is reported.',
+'GLASS: Expression covers only some specimens. Access terms, source overlap, and IDH/time-point alignment require further review; numerical validation was not completed in this analysis.','',
+'4. Data and methodological limitations',
+'All additional tests are post-revision exploratory validation, not preregistered confirmatory research. BH correction does not retrospectively correct the earlier candidate-gene selection.',
+'Effects measured in different expression units are not pooled directly. Pseudobulk log2(CPM+1), mean cellular natural-log expression, FPKM, and normalized microarray signals are reported separately.',
+'New cohorts are selected by design, coverage, and pairing, not positive results. Relaxed thresholds, patient exclusions, and one-sided tests were not used to manufacture conclusions.',
+'Person-level overlap across data sources has not been fully excluded. No direct overlap was found in CARE/GSE174554 specimen-source and tumor IDs, but this does not replace person-level deduplication.','',
+'5. Suggested manuscript interpretation',
+'CGGA693 can add tissue-level association evidence, while nonreplication in CGGA325 and the three paired tissue cohorts is reported in full.',
+'CARE strengthens cross-cohort evidence that SIGLEC1 corresponds to an interferon-related myeloid state. The overall change in 48 pairs and stage-associated change in 47 pairs remain explicitly negative.',
+'Retain the exploratory interpretation of a candidate, context-dependent marker of recurrence-associated myeloid remodeling; do not upgrade this to a validated recurrence-specific marker.',
+'Stop open-ended searches for positive databases. Next, align the evidence level in the manuscript and response and include all additional tests in the supplementary materials.','',
+'6. Quality checks and files',
+f'There are {len(alltests)} primary and sensitivity outcome rows, including {alltests.p.isna().sum()} outcomes not estimable because genes are missing. The remaining tests and BH values were independently recomputed.',
+'The original revision submission-package SHA256 hashes are unchanged; no manuscript was modified or uploaded during this analysis.',
+'Statistics and patient-level data are in results; source metadata, processed matrices, and probe mappings are in input.',
+'Only public metadata, processed matrices, and required platform annotations were downloaded. FASTQ and CEL files were not downloaded; large CARE and CGGA count inputs reused existing caches.','',
+'Public records:']+[f'{k}: {v}' for k,v in urls.items()])
+(ROOT/'Additional_external_validation_report.txt').write_text('\n'.join(lines),encoding='utf-8')
 print(json.dumps(qa,ensure_ascii=False,indent=2));print(primary[['cohort','n_primary','n_recurrent','p','q_within_five','q_across_six_cohorts']].to_string(index=False))
